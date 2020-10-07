@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(93, 141, 113);
+}
+
+
+#titulo{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+  #container {
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+  }
+  
+  .grid-item {
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+  #superContainer{
+      display: flex;
+      justify-content: center;
+  }
