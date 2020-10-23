@@ -11,3 +11,12 @@ function makeRows(rows, cols) {
 };
 
 makeRows(16, 16);
+
+var x = document.getElementsByClassName("grid-item")[1];
+x.addEventListener("mouseover", permanente);
+
+function permanente(){
+  
+
+  document.getElementById("demo").innerHTML += "Moused over!<br>";
+}
