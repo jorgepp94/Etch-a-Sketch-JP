@@ -4,19 +4,18 @@ function makeRows(rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
   for (c = 0; c < (rows * cols); c++) {
-    let cell = document.createElement("div");
+    let box = document.createElement("div");
+    container.appendChild(box).className = "grid-item";
+    box.addEventListener("mouseover", (e) =>{
+      e.target.style.backgroundColor = "dimgray";
+    });
     //cell.innerText = (c + 1);
-    container.appendChild(cell).className = "grid-item";
+    
   };
 };
 
 makeRows(16, 16);
 
-var x = document.getElementsByClassName("grid-item")[1];
-x.addEventListener("mouseover", permanente);
-
-function permanente(){
-  
-
-  document.getElementById("demo").innerHTML += "Moused over!<br>";
+function reloadPage(){
+  window.location.reload();
 }
