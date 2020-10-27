@@ -1,21 +1,23 @@
-const container = document.getElementById("container");
+const container = document.getElementById("grid-container");
+let newGrid;
+makeRows(16);
 
-function makeRows(rows, cols) {
-  container.style.setProperty('--grid-rows', rows);
-  container.style.setProperty('--grid-cols', cols);
-  for (c = 0; c < (rows * cols); c++) {
+function makeRows(gridSize) {
+  container.style.setProperty('--grid-rows', gridSize);
+  container.style.setProperty('--grid-cols', gridSize);
+  for (c = 0; c < (gridSize*gridSize); c++) {
     let box = document.createElement("div");
     container.appendChild(box).className = "grid-item";
     box.addEventListener("mouseover", (e) =>{
-      e.target.style.backgroundColor = "dimgray";
+      e.target.style.backgroundColor = "#48494B";
     });
-    //cell.innerText = (c + 1);
-    
-  };
-};
-
-makeRows(16, 16);
-
-function reloadPage(){
-  window.location.reload();
+  }
 }
+
+
+
+const cleaner = document.getElementById("cleaner");
+cleaner.addEventListener("click", (e) =>{
+    newGrid = prompt("Enter a new grid size:");
+    makeRows(newGrid);
+});

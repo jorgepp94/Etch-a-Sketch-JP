@@ -3,20 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <title>Etch a Sketch JP</title>
     </head>
-    
+
+    <header>
+        <h1  style="color: white;" id="titulo">ETCH-A-SKETCH</h1>
+    </header>
 
 
     <body>
-        <h1 id="titulo">ETCH-A-SKETCH</h1>
-        <div id="buttonContainer">
-            <button id="restartPage" onclick="reloadPage()">RESTART</button>
+        <div id="buttons">
+            <div id="buttonContainer">
+                <button id="cleaner">CLEAN</button>
+            </div>
         </div>
+        
 
-        <div id="superContainer">
-
-            <div id="container"></div>
-        </div>
+            <div id="grid-container"></div>
 
         <script type="text/javascript" src="grid.js"></script>
     </body>

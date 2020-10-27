@@ -1,21 +1,26 @@
-body{
-    background-color: rgb(93, 141, 113);
-}
+html{
+  background-color: #416967;
 
+}
+body{
+  padding: 0;
+  margin: 0;
+}
 
 #titulo{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
   
-  #container {
+  #grid-container {
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     width: 600px;
+    height: auto;
     border: 5px solid dimgray;
   }
-  #container:hover{
+  #grid-container:hover{
     cursor: cell;
   }
   
@@ -25,20 +30,14 @@ body{
     text-align: center;
     
   }
-
-  #superContainer{
-      display: flex;
-      justify-content: center;
-  }
-
-  #buttonContainer{
-    position: absolute;
-    margin-top: 15%;
-  }
-
-  #restartPage{
+#buttonContainer{
+    margin-bottom: 50px;
+    text-align: center;
+}
+  #cleaner{
     width: 100px;
-    height: 100px;
+    height: 40px;
+    border: 1px solid transparent;
     border-radius: 10px;
     background-color: dimgray;
     color: white;
@@ -46,7 +45,11 @@ body{
     font-weight: bold;
   }
   
-  #restartPage:hover{
+  #cleaner:hover{
     cursor: pointer;
     text-overflow: ellipsis;
+    background-color: #48494B;
+  }
+  #cleaner:focus{
+    outline: none;
   }
